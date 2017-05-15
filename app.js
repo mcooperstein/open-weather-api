@@ -7,6 +7,7 @@ function myFunction() {
         var json = JSON.parse(this.responseText);
         $("#city").text("Name of City: " + json.name);
         $("#weather").text("Weather: " + json.weather[0].description);
+        $("#icon").html("<img src='http://openweathermap.org/img/w/" + json.weather[0].icon + ".png'>");
         $("#temp").text("Current Temperature: " + json.main.temp + " degrees Fahrenheit");
     }
 }
